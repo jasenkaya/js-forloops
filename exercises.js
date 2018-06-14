@@ -196,6 +196,25 @@ Declare a variable named `topQuote` and assign it to a String value of your favo
 Write a function that will iterate through the string value and return the longest word in that quote. Console.log your result.
 */
 
+var topQuote = "Kin Wai has a body fat percentage of 20"
+
+function longest(favString){
+  var favStringArray = favString.split(" ")
+  var testLong = 0
+  var longestWord = ""
+  for(var i=0; i<favStringArray.length; i++){
+    if(favStringArray[i].length>testLong){
+      testLong=favStringArray[i].length
+      longestWord = favStringArray[i]
+    }
+  }
+  return longestWord
+}
+
+var resultsLongest = longest(topQuote)
+console.log("The longest word in your favorite quote is: "+ resultsLongest)
+
+
 
 
 /* 12) Puppet Master
@@ -207,6 +226,17 @@ Write a function named `generateArrayOfStrings` which takes a single argument `s
 
 */
 
+// var miscStorage = [ [], 'Carrots', 9, 'Beets', {}, {name: "Todd B."}, 'Mush' ]
+
+// function generateArrayOfStrings(storage){
+//    for(var i=0; i>storage.length; i++){
+//      storage[i] = storage[i]+ " "
+//    }
+//    return storage
+// }
+// var resultsGenerate = generateArrayOfStrings(miscStorage)
+// console.log("The new string array is : "+ resultsGenerate)
+
 
 
 /* 13) All Grown Up 
@@ -214,8 +244,20 @@ Write a function that will capitalize the first letter in each word in the phras
 */
 
 var myWay = "i've lived a life that's full, i've traveled each and every highway. but more, much more than this. i did it my way.";
+console.log(myWay)
+function capFirstLetter (phrase){
+  var phraseArray = phrase.split(" ")
+  var newPhrase = ""
+  for(var i=0; i<phraseArray.length; i++){
+    //newPhrase=newPhrase + phraseArray[i].charAt(0).toUppercase() + " "
+    newPhrase = newPhrase + phraseArray[i].slice(0,1).toUpperCase()+phraseArray[i].slice(1) + " "
+    //console.log(phraseArray[i])
+  }
+  return newPhrase
+}
 
-
+var resultsNewPhrase = capFirstLetter(myWay)
+console.log(resultsNewPhrase)
 
 /* 14) Sightseeing
 Write a function that will loop through the multi-dimensional array and console.log the city and landmark on separate lines.
@@ -225,6 +267,12 @@ Note, please use two for loops to complete this problem
   */
 
 var guide = [["Honolulu", "Waikiki"], ["Tokyo", "Tsukiji Fish Market"], ["Cairo", "Pyramids"],["Rome", "Colosseum"]];
+
+console.log(guide.length)
+
+function city(guideArray){
+  for(var i=0; i<guide.length)
+}
 
 
 
