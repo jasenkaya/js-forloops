@@ -271,9 +271,13 @@ var guide = [["Honolulu", "Waikiki"], ["Tokyo", "Tsukiji Fish Market"], ["Cairo"
 console.log(guide.length)
 
 function city(guideArray){
-  for(var i=0; i<guide.length)
+  for(var i=0; i<guide.length; i++){
+    for(var j=0; j<guide[i].length; j++){
+      console.log(guideArray[i][j])
+    }
+  }
 }
-
+city(guide)
 
 
 /* 15) Back to School
